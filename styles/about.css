@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+}
+
+p {
+    color: white;
+    padding: 0.5rem;
+}
+
+h3 {
+    text-decoration: underline;
+    text-decoration-thickness: 0.1rem;
+}
+
+
+
+.general-header {
+    background-color: #142034;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a:hover{
+    color: white;
+}
+
+.general-header a{
+    color: white;
+    text-decoration: none;
+}
+
+.general-header h1 {
+    padding: 2%;
+    font-size: 4rem;
+    font-family: 'Lato', sans-serif;
+}
+
+.general-navbar {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    font-size: 2rem;
+    text-align: center;
+    justify-content: space-around;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: row;
+    background-color: #275084;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/*Primer parrafo*/
+.content-article {
+    width: 70%;
+    font-size: 1.5rem;
+    border-right: 1px solid black;
+
+}
+
+.content-article>section {
+    padding: 5%;
+    display: flex;
+    height: 25%;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.content-article>section:nth-child(even) {
+    background-color: #183255;
+
+}
+
+.section-text {
+    width: 60%;
+}
+
+.content-article img {
+    width: 40%;
+    height: 20rem;
+}
+
+.content-article>section:first-child {
+    background-color: #275084;
+}
+
+.content-aside {
+    width: 30%;
+}
+
+/*Tamaño del mapa*/
+.mapa {
+    width: 90%;
+    height: 90%;
+}
+
+/*Imagen del simbolo de ubicacion*/
+.content-article .ubicacion {
+    width: 5%;
+    height: 10%;
+    padding-left: 1rem;
+}
+
+aside>article {
+    border-bottom: 2px solid rgb(52, 45, 45);
+    text-align: center;
+}
+
+#bienvenida {
+    align-items: center;
+}
+
+#bienvenida-text {
+    text-align: center;
+    padding-bottom: 0;
+}
+
+/*Imagenes del aside*/
+img {
+    width: 100%;
+    height: auto;
+}
+
+/*Imagen del trofeo (tiene distintas medidas que el resto)*/
+.trofeo {
+    width: 30%;
+    height: 20%;
+}
+
+footer {
+    background-color: #1e1e1e;
+    width: 100%;
+    height: 8rem;
+    padding: 2rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+}
+/*FOOTER BOOTSRAP*/
+footer>p {
+    position: relative;
+    top: 3rem;
+    height: 1rem;
+    right: 2.75rem;
+    display: flex;
+    justify-content: center;
+    opacity: 40%;
+    color: white;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+.firstrow {
+    position: relative;
+    top: 0.5rem;
+    margin: 0;
+}
+
+.secondrow{
+    position: relative;
+    top: -0.25rem;
+}
+
+.thirdrow{
+    position: relative;
+    top: -1rem;
+}
+
+.firstcol{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 7rem;
+}
+.secondcol {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 15rem;
+    top: 0.25rem;
+}
+
+a:hover {
+    color: white;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 0.125rem;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@media screen and (max-width:1300px) {
+
+    /*Tamaño del logo*/
+    .general-header h1 {
+        font-size: 3rem;
+    }
+
+    /*Tamaño de fuente de la barra de navegacion*/
+    .general-navbar {
+        font-size: 1rem;
+        padding: 0 2% 0.2rem 2%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+    /*Primer parrafo*/
+    .content-article {
+        width: 70%;
+        font-size: 1rem;
+    }
+
+    /*Imagenes principales*/
+    .content-article img {
+        width: 60%;
+        height: auto;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .content-article>section {
+        padding: 3%;
+    }
+
+    /*Imagenes del aside*/
+    aside img {
+        width: 70%;
+        height: auto;
+        margin-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    /*imagen del simbolo de ubicacion*/
+    .content-article .ubicacion {
+        width: 5%;
+    }
+
+    
+
+    
+
+}
+
+@media screen and (max-width:1200px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .content-article {
+        width: 100%;
+    }
+
+    .content-aside {
+        width: 100%;
+    }
+    #mapa {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #mapa img{
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    .content-article>section {
+        flex-direction: column;
+    }
+
+    .content-article>section>img {
+        width: 100%;
+        height: auto;
+    }
+
+    article img {
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    .general-navbar {
+        font-size: 0.8rem;
+    }
+
+    .general-navbar>li {
+        padding: 0 2% 0.2rem 2%;
+    }
+
+    .section-text {
+        width: 100%;
+    }
+
+    .section-text h2 {
+        text-align: center;
+    }
+
+    footer {
+        font-size: 0.7rem;
+        padding: 1rem 1rem 0.5rem 1rem;
+    }
+
+    .footer-nav ul {
+        padding: 0;
+        width: 100%;
+    }
+
+}
